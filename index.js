@@ -23,6 +23,8 @@ app.get('/api', (req, res) =>{
         "utc_time": utc,
         "github_repo_url": "https://github.com/Feeleep-lgtm/hngx",
         "track": "backend",
+        "github_file_url": "https://github.com/Feeleep-lgtm/hngx/blob/main/index.js",
+        "status_code": "200"
 
     })
 })
