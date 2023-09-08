@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(express.json());
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || s3000;
 let day = new Date()
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 currentDay = weekday[day.getDay()]
