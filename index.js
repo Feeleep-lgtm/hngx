@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 //const aqp = require("api-query-params")
 const cors = require("cors");
-const moment = require('moment/moment');
+const moment = require('moment');
 
 app.use(express.json());
 
