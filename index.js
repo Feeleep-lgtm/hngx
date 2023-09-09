@@ -19,7 +19,7 @@ const currentDay = day.toLocaleString('en-US', {weekday: 'long'});
 // const currentDate =moment.utc().format("YYYY-MM-DDTHH:mm:ss[Z]")
 //const currentDate = new Date(Date.now()).toISOString().split('.')[0] + 'Z'
 // console.log(utc);
-const now = new Date().toISOString().slice(0, 19) + 'Z';
+const now = new Date().toISOString()//.slice(0, 19) + 'Z';
 
 app.get('/api', async (req, res) =>{
    
