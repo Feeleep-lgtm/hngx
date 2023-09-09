@@ -19,10 +19,10 @@ const currentDay = day.toLocaleString('en-US', {weekday: 'long'});
 // const currentDate =moment.utc().format("YYYY-MM-DDTHH:mm:ss[Z]")
 //const currentDate = new Date(Date.now()).toISOString().split('.')[0] + 'Z'
 // console.log(utc);
-const now = new Date().toISOString().split('.')[0] + 'Z'   //.slice(0, 19) + 'Z';
+//const now = new Date().toISOString().split('.')[0] + 'Z'   //.slice(0, 19) + 'Z';
 
 app.get('/api', async (req, res) =>{
-   
+    const now = new Date().toISOString().split('.')[0] + 'Z'
     let track = req.query.track
     let slack_name = req.query.slack_name
    
