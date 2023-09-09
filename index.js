@@ -11,14 +11,14 @@ const PORT = process.env.PORT || 3000;
 let day = new Date()
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 currentDay = weekday[day.getDay()]
-let utc = new Date().getUTCDate
+let utc = new Date()
+console.log(utc);
 
 app.get('/api?', async (req, res) =>{
    
     let track = req.query.track
     let slack_name = req.query.slack_name
    
-    console.log(day);
     res.status(200).json({
         "slack_name": slack_name,
         "current_day": currentDay,
