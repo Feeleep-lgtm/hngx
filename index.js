@@ -13,7 +13,7 @@ const day = new Date()
 // currentDay = weekday[day.getDay()]
 // let utc = day.toISOString().slice(0, 19) + "Z"
 const currentDay = day.toLocaleString('en-US', {weekday: 'long'});
-const utc = day.toISOString().slice(0, 19) + "Z"
+const utc = day.toISOString().split('.')[0] + "Z"
 // console.log(utc);
 
 app.get('/api', async (req, res) =>{
