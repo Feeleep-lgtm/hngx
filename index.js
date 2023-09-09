@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 //const aqp = require("api-query-params")
 const cors = require("cors");
+const moment = require('moment/moment');
 
 app.use(express.json());
 
@@ -13,7 +14,7 @@ const day = new Date()
 // currentDay = weekday[day.getDay()]
 // let utc = day.toISOString().slice(0, 19) + "Z"
 const currentDay = day.toLocaleString('en-US', {weekday: 'long'});
-const utc = day.toISOString().split('.')[0] + "Z"
+const currentDate =moment.utc().format("YYYY-MM-DDTHH:mm:ss[z]")
 // console.log(utc);
 
 app.get('/api', async (req, res) =>{
@@ -24,7 +25,7 @@ app.get('/api', async (req, res) =>{
     res.status(200).json({
         "slack_name": slack_name,
         "current_day": currentDay,
-        "utc_time": utc,
+        "utc_time": currentDate,
         "github_repo_url": "https://github.com/Feeleep-lgtm/hngx",
         "track": track,
         "github_file_url": "https://github.com/Feeleep-lgtm/hngx/blob/main/index.js",
